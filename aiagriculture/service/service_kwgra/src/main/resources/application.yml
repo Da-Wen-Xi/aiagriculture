@@ -1,0 +1,22 @@
+server:
+  port: 8018 # 服务端口
+
+spring:
+  profiles:
+    active: dev # 环境设置
+  application:
+    name: service-kwgra # 服务名
+  data:
+    neo4j:
+      username: neo4j
+      password: 123456
+      uri: bolt://localhost:7687
+  main:
+      allow-bean-definition-overriding: true
+logging:
+  level:
+    root: info
+    org:
+      neo4j:
+        ogm:
+          level: debug
